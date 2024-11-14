@@ -1,0 +1,66 @@
+version: 2
+
+sources:
+  - name: landing_layer
+    description: tables coming from Go Student database
+    schema: landing_layer
+    tables:
+      - name: marketing_costs_dataset
+        columns:
+          - name: DATE
+            description: ''
+          - name: MARKETING_SOURCE
+            description: ''
+          - name: MARKETING_COSTS
+            description: ''
+      - name: call_dataset
+        columns:
+          - name: CONTACT_ID
+            description: ''
+          - name: TRIAL_BOOKED
+            description: ''
+          - name: TRIAL_DATE
+            description: ''
+          - name: CALL_ATTEMPS
+            description: ''  
+          - name: TOTAL_CALL_DURATION
+            description: ''
+          - name: CALLS_30
+            description: ''
+      - name: lead_dataset
+        columns:
+          - name: CONTACT_ID
+            description: ''
+          - name: MARKETING_SOURCE
+            description: ''
+          - name: CREATE_DATE
+            description: ''
+          - name: KNOWN_CITY
+            description: ''  
+          - name: MESSAGE_LENGTH
+            description: ''
+          - name: TEST_FLAG
+            description: ''
+      - name: customer_dataset
+        columns:
+          - name: CONTACT_ID
+            description: ''
+          - name: CUSTOMER_DATE
+            description: ''  
+          - name: CONTRACT_LENGTH
+            description: ''
+      - name: clv_dataset
+        columns:
+          - name: CONTRACT_LENGTH
+            description: ''
+          - name: AVG_CLV
+            description: '' 
+      - name: sales_cost_dataset
+        columns:
+          - name: MONTH
+            description: ''
+          - name: TOTAL_SALES_COSTS
+            description: '' 
+          - name: TRIAL_COSTS
+            description: ''   
+
