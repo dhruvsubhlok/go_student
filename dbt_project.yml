@@ -1,4 +1,4 @@
-name: 'go_student'
+name: 'go_student_dbt'
 version: '1.0.0'
 
 # This setting configures which "profile" dbt uses for this project.
