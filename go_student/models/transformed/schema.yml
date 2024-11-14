@@ -1,0 +1,21 @@
+
+version: 2
+
+models:
+  - name: marketing_costs_agg
+    description: "Model with daily aggregated marketing costs"
+    columns:
+      - name: date
+        description: "The primary key for this table"
+      - name: daily_marketing_costs
+        description: "Marketing Costs"  
+        
+
+  # - name: my_second_dbt_model
+  #   description: "A starter dbt model"
+  #   columns:
+  #     - name: id
+  #       description: "The primary key for this table"
+  #       data_tests:
+  #         - unique
+  #         - not_null
