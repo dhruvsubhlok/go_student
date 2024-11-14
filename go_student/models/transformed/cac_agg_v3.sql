@@ -3,7 +3,7 @@
 select coalesce(mc.conversion_year_month,mcd.date) as year_month,
 coalesce(mc.conversion_source,mcd.marketing_source) as conversion_source,
 round(coalesce(marketing_costs,0)::NUMERIC,2) as marketing_costs,
-sum(coalesce(conversion_count,0)) as conversion_count,
+round(sum(coalesce(conversion_count,0))::NUMERIC,2) as conversion_count,
 case when conversion_count is null then FALSE else TRUE end as conversion_flag
 
 from 
