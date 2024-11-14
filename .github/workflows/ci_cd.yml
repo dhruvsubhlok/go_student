@@ -34,10 +34,9 @@ jobs:
           dbt deps
 
       - name: Run DBT Tests
-        env:
-          DBT_PROFILES_DIR: ${{ secrets.DBT_PROFILES_DIR }}
-          DBT_CONNECTION_STRING: ${{ secrets.DBT_CONNECTION_STRING }}
         run: |
+          echo DBT_PROFILES_DIR=${{ secrets.DBT_PROFILES_DIR }} >> dbt.env
+          echo DBT_CONNECTION_STRING=${{ secrets.DBT_CONNECTION_STRING }} >> dbt.env
           dbt seed --profiles-dir $DBT_PROFILES_DIR  # Load seed data if needed
           dbt run --models +model_name  # Run specific models
           dbt test --models +model_name  # Run tests on models
